@@ -1,0 +1,118 @@
+{
+  "name": "vxe-table",
+  "version": "2.8.33",
+  "description": "vxe-table vue 表格解决方案",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "build": "vue-cli-service build",
+    "lib:modules": "gulp build",
+    "lib:pack": "vue-cli-service build --target lib --name index --dest lib index.js",
+    "lib": "npm run lib:pack && npm run lib:modules"
+  },
+  "files": [
+    "lib",
+    "types",
+    "packages",
+    "styles"
+  ],
+  "main": "lib/vxe-table.js",
+  "style": "lib/index.css",
+  "unpkg": "lib/index.min.js",
+  "jsdelivr": "lib/index.min.js",
+  "typings": "types/index.d.ts",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-plugin-typescript": "~4.2.0",
+    "@vue/cli-plugin-vuex": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/eslint-config-standard": "^5.1.0",
+    "@vue/eslint-config-typescript": "^5.0.1",
+    "ant-design-vue": "^1.4.12",
+    "echarts": "^4.6.0",
+    "element-ui": "^2.13.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
+    "file-saver": "^2.0.2",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "highlight.js": "^9.17.0",
+    "jspdf": "^1.5.3",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "sortablejs": "^1.10.2",
+    "typescript": "~3.7.5",
+    "view-design": "^4.1.3",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.15.3",
+    "vue-router": "^3.1.5",
+    "vue-template-compiler": "^2.6.11",
+    "vxe-table-plugin-antd": "^1.8.1",
+    "vxe-table-plugin-charts": "^1.2.0",
+    "vxe-table-plugin-element": "^1.8.1",
+    "vxe-table-plugin-excel": "^1.3.3",
+    "vxe-table-plugin-export-pdf": "^1.3.0",
+    "vxe-table-plugin-export-xlsx": "^1.3.0",
+    "vxe-table-plugin-iview": "^1.8.1",
+    "vxe-table-plugin-menus": "^1.3.0",
+    "vxe-table-plugin-renderer": "^1.1.0",
+    "vxe-table-plugin-shortcut-key": "^1.2.0",
+    "vxe-table-plugin-virtual-tree": "0.1.2",
+    "xe-ajax": "^4.0.3",
+    "xe-ajax-mock": "^1.9.4",
+    "xe-clipboard": "^1.7.2",
+    "xe-utils": "^2.4.2",
+    "xlsx": "^0.15.6"
+  },
+  "peerDependencies": {
+    "vue": ">=2.6.0",
+    "xe-utils": ">=2.4.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuliangzhan/vxe-table.git"
+  },
+  "keywords": [
+    "vxe-table",
+    "vxe-grid",
+    "vue table",
+    "vue grid"
+  ],
+  "author": {
+    "name": "Xu Liangzhan",
+    "email": "xu_liangzhan@163.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuliangzhan/vxe-table/issues"
+  },
+  "homepage": "https://github.com/xuliangzhan/vxe-table#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

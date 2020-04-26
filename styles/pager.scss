@@ -1,0 +1,283 @@
+/**Variable**/
+@import './helpers/mixin.scss';
+
+/*pager*/
+.vxe-pager {
+  height: $vxe-table-row-height-default;
+  display: flex;
+  align-items: center;
+  font-size: $vxe-font-size;
+  color: $vxe-font-color;
+  font-family: $vxe-font-family;
+  text-align: right;
+  &.align--left {
+    text-align: left;
+  }
+  &.align--center {
+    text-align: center;
+  }
+  &.is--loading {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: $vxe-loading-z-index;
+      user-select: none;
+      background-color: $vxe-loading-background-color;
+    }
+  }
+  .vxe-pager--prev-btn,
+  .vxe-pager--next-btn,
+  .vxe-pager--num-btn,
+  .vxe-pager--jump-prev,
+  .vxe-pager--jump-next {
+    border: 1px solid transparent;
+  }
+  &.is--border,
+  &.is--perfect {
+    &:not(.is--background) {
+      .vxe-pager--prev-btn,
+      .vxe-pager--next-btn,
+      .vxe-pager--num-btn,
+      .vxe-pager--jump-prev,
+      .vxe-pager--jump-next {
+        border-color: $vxe-input-border-color;
+      }
+    }
+  }
+  &.is--background,
+  &.is--perfect {
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn {
+      background-color: #f4f4f5;
+    }
+    .vxe-pager--jump-prev,
+    .vxe-pager--num-btn,
+    .vxe-pager--jump-next {
+      background-color: #f4f4f5;
+      &:hover {
+        color: $vxe-primary-color;
+      }
+      &.is--active {
+        color: #fff;
+        background-color: $vxe-primary-color;
+      }
+    }
+  }
+  &.is--perfect {
+    border: 1px solid $vxe-table-border-color;
+    border-top-width: 0;
+    background-color: $vxe-table-header-background-color;
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn,
+    .vxe-pager--jump-prev,
+    .vxe-pager--num-btn,
+    .vxe-pager--jump-next {
+      background-color: #fff;
+    }
+  }
+  &.is--border {
+    .vxe-pager--num-btn {
+      &.is--active {
+        border-color: $vxe-primary-color;
+      }
+    }
+  }
+  &.size--medium {
+    font-size: $vxe-font-size-medium;
+    min-height: $vxe-table-row-height-medium;
+    .vxe-pager--count,
+    .size--content,
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn,
+    .vxe-pager--jump-prev,
+    .vxe-pager--num-btn,
+    .vxe-pager--jump-next {
+      height: 28px;
+      line-height: 26px;
+    }
+    .vxe-pager--jump .vxe-pager--goto,
+    .vxe-pager--sizes > .vxe-input {
+      height: 28px;
+    }
+  }
+  &.size--small {
+    font-size: $vxe-font-size-small;
+    min-height: $vxe-table-row-height-small;
+    .vxe-pager--count,
+    .size--content,
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn,
+    .vxe-pager--jump-prev,
+    .vxe-pager--num-btn,
+    .vxe-pager--jump-next {
+      height: 26px;
+      line-height: 24px;
+    }
+    .vxe-pager--jump .vxe-pager--goto,
+    .vxe-pager--sizes > .vxe-input {
+      height: 26px;
+    }
+  }
+  &.size--mini {
+    font-size: $vxe-font-size-mini;
+    min-height: $vxe-table-row-height-mini;
+    .vxe-pager--count,
+    .size--content,
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn,
+    .vxe-pager--jump-prev,
+    .vxe-pager--num-btn,
+    .vxe-pager--jump-next {
+      height: 24px;
+      line-height: 22px;
+    }
+    .vxe-pager--jump .vxe-pager--goto,
+    .vxe-pager--sizes > .vxe-input {
+      height: 24px;
+    }
+  }
+  .vxe-pager--wrapper {
+    flex-grow: 1;
+  }
+  .vxe-pager--total,
+  .vxe-pager--prev-btn,
+  .vxe-pager--next-btn,
+  .vxe-pager--jump,
+  .vxe-pager--jump-prev,
+  .vxe-pager--jump-next,
+  .vxe-pager--count {
+    margin: 0 0.4em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .vxe-pager--prev-btn,
+  .vxe-pager--jump-prev,
+  .vxe-pager--num-btn,
+  .vxe-pager--jump-next,
+  .vxe-pager--next-btn {
+    cursor: pointer;
+  }
+  .vxe-pager--count,
+  .size--content,
+  .vxe-pager--prev-btn,
+  .vxe-pager--next-btn,
+  .vxe-pager--jump-prev,
+  .vxe-pager--num-btn,
+  .vxe-pager--jump-next {
+    height: 30px;
+    line-height: 28px;
+    display: inline-block;
+  }
+  .vxe-pager--jump .vxe-pager--goto,
+  .vxe-pager--sizes > .vxe-input {
+    height: 30px;
+  }
+  .vxe-pager--sizes > .vxe-select--panel .vxe-select-option {
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .vxe-pager--btn-wrapper {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    .vxe-pager--jump-prev,
+    .vxe-pager--jump-next {
+      &:hover {
+        .vxe-pager--jump-more {
+          display: none;
+        }
+        .vxe-pager--jump-icon {
+          display: inline-block;
+        }
+      }
+    }
+    .vxe-pager--jump-icon {
+      display: none;
+    }
+  }
+  .vxe-pager--jump-prev,
+  .vxe-pager--prev-btn,
+  .vxe-pager--next-btn,
+  .vxe-pager--jump-next,
+  .vxe-pager--num-btn {
+    min-width: 2em;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0 0.25em;
+    user-select: none;
+    &:hover,
+    &.is--active {
+      color: $vxe-primary-color;
+    }
+    &.is--disabled {
+      cursor: no-drop;
+      color: $vxe-disabled-color;
+      &:hover {
+        color: $vxe-disabled-color;
+      }
+    }
+  }
+  .vxe-pager--num-btn {
+    vertical-align: middle;
+    &.is--active {
+      font-weight: 700;
+      color: $vxe-primary-color;
+    }
+  }
+  .vxe-pager--btn-icon,
+  .vxe-pager--jump-icon {
+    margin-top: -2px;
+  }
+  .vxe-pager--sizes {
+    width: 7em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    & .vxe-input--inner {
+      text-align: center;
+    }
+  }
+  .vxe-pager--count {
+    min-width: 2em;
+    text-align: center;
+    & > span {
+      vertical-align: middle;
+    }
+    .vxe-pager--separator {
+      margin-right: 0.2em;
+      &:before {
+        content: "/";
+      }
+    }
+  }
+  .vxe-pager--jump .vxe-pager--goto {
+    border-radius: 4px;
+    border: 1px solid $vxe-input-border-color;
+    color: $vxe-font-color;
+    transition: border .2s ease-in-out;
+    &:focus {
+      border: 1px solid $vxe-primary-color;
+      outline: 0;
+    }
+  }
+  .vxe-pager--jump {
+    .vxe-pager--goto-text {
+      margin-right: 4px;
+    }
+    .vxe-pager--classifier-text {
+      margin-left: 4px;
+    }
+    .vxe-pager--goto {
+      width: 3.2em;
+      text-align: center;
+    }
+  }
+}

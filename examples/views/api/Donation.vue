@@ -1,0 +1,55 @@
+<template>
+  <div>
+    <p class="tip">{{ $t('app.footer.donationDesc') }}</p>
+    <div class="upgrade">
+      <a class="link" href="https://github.com/xuliangzhan/vxe-table/issues/712">
+        <span>😱{{ $t('app.body.other.compatibility') }}</span>
+      </a>
+      <a class="link" href="https://github.com/xuliangzhan/vxe-table/releases">
+        <span>👀{{ $t('app.body.other.releases') }}</span>
+      </a>
+    </div>
+    <div class="desc">
+      <div class="title">🐬 计划</div>
+      <ul class="plan">
+        <li><i class="fa fa-battery-4"></i>{{ $t('app.body.other.plan.v1') }}</li>
+        <li><i class="fa fa-battery-4"></i>{{ $t('app.body.other.plan.v2') }}</li>
+        <li><i class="fa fa-battery-2"></i>{{ $t('app.body.other.plan.v3') }}</li>
+        <li><i class="fa fa-battery-0"></i>{{ $t('app.body.other.plan.v4') }}</li>
+      </ul>
+    </div>
+    <div class="content" style="padding-top: 50px">
+      <div style="display: inline-block;">
+        <div>💰{{ $t('app.body.label.through') }} <a href="https://gitee.com/xuliangzhan_admin/vxe-table#donation" target="_blank">Gitee {{ $t('app.body.other.donation') }}</a>{{ $t('app.body.other.donationTitle') }}<span class="red">（如果有问题需要支持可以留言或者提 <a class="link" href="https://github.com/xuliangzhan/vxe-table/issues/390">Issues</a>）</span></div>
+        <div>
+          <img src="static/donation/pay.jpg">
+        </div>
+      </div>
+      <div style="display: inline-block;margin-left: 20em;">
+        <div><span style="font-size: 22px;font-weight: 700;">😘QQ群</span><br>{{ $t('app.body.other.issuesTitle') }}<a href="https://github.com/xuliangzhan/vxe-table/issues/390" target="_blank">New issues</a></div>
+        <img src="static/donation/qq.png">
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.desc {
+  padding-left: 40px;
+  .title {
+    padding: 5px 0;
+    font-weight: 700;
+  }
+  .plan {
+    margin: 0;
+    padding: 0;
+    i {
+      color: #409eff;
+      margin-right: 5px;
+    }
+  }
+}
+.content {
+  text-align: center;
+}
+</style>
